@@ -32,3 +32,6 @@ out/
 
 ### VS Code ###
 .vscode/
+
+### database permission ###
+application.yml
