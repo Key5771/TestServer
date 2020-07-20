@@ -17,7 +17,7 @@ import javax.persistence.Id;
 @AllArgsConstructor
 public class TestData {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     private String title;
     private String content;
