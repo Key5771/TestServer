@@ -12,8 +12,9 @@ import java.util.List;
 public class TestController {
     private final TestRepository testRepository;
 
-    @GetMapping("/test/{id}")
-    public Result<List<TestData>> get(@PathVariable("id") Integer id) {
+    @GetMapping("/test/")
+    public Result<List<TestData>> get() {
+        System.out.println("test");
         return new Result(testRepository.findAll());
     }
 
