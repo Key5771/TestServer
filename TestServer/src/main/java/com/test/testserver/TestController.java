@@ -18,6 +18,12 @@ public class TestController {
         return new Result(testRepository.findAll());
     }
 
+    @GetMapping("/test/{id}")
+    public TestData getContent(@PathVariable("id") Integer id) {
+        System.out.println("tteesstt");
+        return testRepository.findById(id).get();
+    }
+
     @PostMapping("/test")
     public Result<TestData> create(@RequestBody TestData testData) {
         testData = testRepository.save(testData);
