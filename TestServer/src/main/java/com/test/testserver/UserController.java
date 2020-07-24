@@ -26,6 +26,7 @@ public class UserController {
             User loginUser = userRepository.findByUsernameAndPassword(user.getUsername(), user.getPassword()).get();
             if (loginUser != null) {
                 session.setAttribute("loginUserId", loginUser.getId());
+                System.out.println("Login User: " + loginUser);
                 return loginUser;
             } else {
                 response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
