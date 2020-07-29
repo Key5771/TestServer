@@ -19,8 +19,8 @@ public class TestController {
     }
 
     @GetMapping("/test/{id}")
-    public TestData getContent(@PathVariable("id") Integer id) {
-        System.out.println("tteesstt");
+    public TestData getContent(@PathVariable Integer id) {
+        System.out.println("tteesstt" + id.toString());
         return testRepository.findById(id).get();
     }
 
